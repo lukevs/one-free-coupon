@@ -26,7 +26,6 @@ contract User is ERC721Holder {
     }
 }
 
-
 contract OneFreeNFTTest is DSTest {
     Hevm internal constant hevm = Hevm(HEVM_ADDRESS);
 
