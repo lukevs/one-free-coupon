@@ -66,7 +66,7 @@ contract OneFreeNFT is ERC721("OneFreeNFT", "OF") {
 
         parts[2] = "</text><text x='10' y='80' class='base'>from</text><text x='10' y='100' class='base'>0x";
 
-        parts[3] = toAsciiString(ownerOf(tokenId));
+        parts[3] = toAsciiString(couponGivers[tokenId]);
 
         parts[4] = "</text></svg>";
 
