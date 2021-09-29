@@ -6,5 +6,5 @@ set -eo pipefail
 . $(dirname $0)/common.sh
 
 # Deploy.
-GreeterAddr=$(deploy Greeter)
-log "Greeter deployed at:" $GreeterAddr
+OneFreeNFTAddr=$(deploy OneFreeNFT)
+log "OneFreeNFT deployed at:" $OneFreeNFTAddr

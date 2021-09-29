@@ -9,22 +9,20 @@ set -eo pipefail
 . $(dirname $0)/deploy.sh
 
 # get the address
-addr=$(jq -r '.Greeter' out/addresses.json)
+addr=$(jq -r '.OneFreeNFT' out/addresses.json)
 
-# the initial greeting must be empty
-greeting=$(seth call $addr 'greeting()(string)')
-[[ $greeting = "" ]] || error
-
-# set it to a value
+# mint a coupon
 seth send $addr \
-    'greet(string memory)' '"yo"' \
+    'mint(address,string memory)(uint256)' \
+    '0x0000000000000000000000000000000000000001' \
+     '"hug"' \
     --keystore $TMPDIR/8545/keystore \
     --password /dev/null
 
 sleep 1
 
-# should be set afterwards
-greeting=$(seth call $addr 'greeting()(string)')
-[[ $greeting = "yo" ]] || error
+# coupon for token should be set to that value
+coupon=$(seth call $addr 'coupons(uint256)(string)' 0)
+[[ $coupon = "hug" ]] || error
 
 echo "Success."
