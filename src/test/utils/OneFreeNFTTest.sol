@@ -16,6 +16,14 @@ contract User is ERC721Holder {
     function mint(address to, string memory coupon) public returns (uint256) {
         return oneFreeNFT.mint(to, coupon);
     }
+
+    function redeem(uint256 tokenId) public {
+        return oneFreeNFT.redeem(tokenId);
+    }
+
+    function grant(uint256 tokenId) public {
+        return oneFreeNFT.grant(tokenId);
+    }
 }
 
 
