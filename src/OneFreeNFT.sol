@@ -60,15 +60,11 @@ contract OneFreeNFT is ERC721("OneFreeNFT", "OF") {
     {
         string[5] memory parts;
 
-        parts[
-            0
-        ] = "<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet' viewBox='0 0 350 350'> <style> .base { fill: black; font-family: Comic Sans MS, Comic Sans, cursive; font-size: 14px; } .red { fill: red } </style> <rect width='100%' height='100%' fill='white' /><text x='10' y='20' class='base'>1 free coupon for</text><text x='10' y='40' class='base red'>";
+        parts[0] = "<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet' viewBox='0 0 350 350'> <style> .base { fill: black; font-family: Comic Sans MS, Comic Sans, cursive; font-size: 14px; } .red { fill: red } </style> <rect width='100%' height='100%' fill='white' /><text x='10' y='20' class='base'>1 free coupon for</text><text x='10' y='40' class='base red'>";
 
         parts[1] = coupons[tokenId];
 
-        parts[
-            2
-        ] = "</text><text x='10' y='80' class='base'>from</text><text x='10' y='100' class='base'>0x";
+        parts[2] = "</text><text x='10' y='80' class='base'>from</text><text x='10' y='100' class='base'>0x";
 
         parts[3] = toAsciiString(ownerOf(tokenId));
 
