@@ -37,7 +37,8 @@ contract OneFreeCouponTest is DSTest {
     User internal bob;
 
     function setUp() public virtual {
-        oneFreeNFT = new OneFreeCoupon();
+        address ensDummy = 0x084b1c3C81545d370f3634392De611CaaBFf8148;
+        oneFreeNFT = new OneFreeCoupon(ensDummy);
         alice = new User(address(oneFreeNFT));
         bob = new User(address(oneFreeNFT));
     }
