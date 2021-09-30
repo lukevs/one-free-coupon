@@ -65,10 +65,10 @@ contract OneFreeCoupon is ERC721("OneFreeCoupon", "OF") {
         returns (string memory)
     {
         require(_exists(tokenId), "OneFreeCoupon: token id doesn't exist");
-        return buildTokenUri(tokenId, coupons[tokenId], couponGivers[tokenId]);
+        return buildTokenURI(tokenId, coupons[tokenId], couponGivers[tokenId]);
     }
 
-    function buildTokenUri(uint256 tokenId, string memory coupon, address givenByAddress)
+    function buildTokenURI(uint256 tokenId, string memory coupon, address givenByAddress)
         public
         pure
         returns (string memory)
@@ -83,7 +83,7 @@ contract OneFreeCoupon is ERC721("OneFreeCoupon", "OF") {
 
         parts[
             2
-        ] = "</tspan><tspan x='230.004' y='160.227'>COUPON REDEEMABLE FOR:</tspan></text><text fill='#000' xml:space='preserve' style='white-space:pre' font-family='Comic Sans MS' font-size='48' font-weight='bold' letter-spacing='0em'><tspan x='294.328' y='325.453'>";
+        ] = "</tspan><tspan x='230.004' y='160.227'>COUPON REDEEMABLE FOR:</tspan></text><text fill='#000' xml:space='preserve' style='white-space:pre' font-family='Comic Sans MS' font-size='48' font-weight='bold' letter-spacing='0em'><tspan text-anchor='middle' x='50%' y='325.453'>";
 
         parts[3] = coupon;
 
