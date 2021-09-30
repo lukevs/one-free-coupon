@@ -93,7 +93,7 @@ contract OneFreeCoupon is ERC721("OneFreeCoupon", "OF") {
 
         parts[
             2
-        ] = "</tspan><tspan x='230.004' y='160.227'>COUPON REDEEMABLE FOR:</tspan></text><text fill='#000' xml:space='preserve' style='white-space:pre' font-family='Comic Sans MS' font-size='48' font-weight='bold' letter-spacing='0em'><tspan text-anchor='middle' x='50%' y='325.453'>";
+        ] = "</tspan><tspan x='230.004' y='160.227'>COUPON REDEEMABLE FOR:</tspan></text><text fill='#000' xml:space='preserve' style='white-space:pre' font-family='Comic Sans MS' font-size='36' font-weight='bold' letter-spacing='0em'><tspan text-anchor='middle' x='50%' y='325.453'>";
 
         parts[3] = coupon;
 
