@@ -2,26 +2,22 @@
 
 > on-chain coupons
 
-uses an on-chain svg
-and supports ENS lookup
-
-> 
 ![image](https://user-images.githubusercontent.com/5885679/135334888-e7cf045c-db2e-4d67-876b-751ac448117b.png)
 
-## non-ERC-721 functions
+## How it works
 
-### mint(address to, string memory coupon)
+🎟 `mint` to a friend - `mint(address to, string memory coupon)`
 
-mints a new coupon to to
+💰 Friend can `redeem` when ready to cash in - `redeem(uint256 tokenId)`
 
-### redeem(uint256 tokenId)
+✅ You can then `grant` to burn the coupon - `grant(uint256 tokenId)`
 
-coupon holder asks to redeem it
+## Features
 
-### grant(uint256 tokenId)
+⛓ Uses an on-chain svg
 
-coupon giver grants the coupon, which burns it
+🔎 "given by" supports ENS lookup
 
-## looks like this
+## It looks like this
 
 ![test](https://user-images.githubusercontent.com/5885679/135536468-783a1421-41e7-4414-8376-5e61a2ea0b24.png)
