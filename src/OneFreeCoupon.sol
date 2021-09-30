@@ -118,13 +118,13 @@ contract OneFreeCoupon is ERC721("OneFreeCoupon", "OF") {
             bytes(
                 string(
                     abi.encodePacked(
-                        "{'name': 'Coupon #",
+                        '{"name": "Coupon #',
                         Strings.toString(tokenId),
-                        "', 'description': 'coupon redeemable for ",
+                        '", "description": "coupon redeemable for ',
                         coupon,
-                        "', 'image': 'data:image/svg+xml;base64,",
+                        '", "image": "data:image/svg+xml;base64,',
                         Base64.encode(bytes(output)),
-                        "'}"
+                        '"}'
                     )
                 )
             )
