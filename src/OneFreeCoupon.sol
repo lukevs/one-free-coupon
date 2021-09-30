@@ -14,7 +14,7 @@ interface IReverseRegistrar {
     function defaultResolver() external view returns (IDefaultResolver);
 }
 
-contract OneFreeCoupon is ERC721("OneFreeCoupon", "OF") {
+contract OneFreeCoupon is ERC721("OneFreeCoupon", "OFC") {
     enum CouponStatus {
         UNUSED,
         REDEEM_REQUESTED,
