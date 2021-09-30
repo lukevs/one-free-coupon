@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "./Base64.sol";
 
-contract OneFreeNFT is ERC721("OneFreeNFT", "OF") {
+contract OneFreeCoupon is ERC721("OneFreeCoupon", "OF") {
     enum CouponStatus {
         UNUSED,
         REDEEM_REQUESTED,
@@ -34,7 +34,7 @@ contract OneFreeNFT is ERC721("OneFreeNFT", "OF") {
     function redeem(uint256 tokenId) external {
         require(
             ownerOf(tokenId) == msg.sender,
-            "OneFreeNFT: you don't own this coupon"
+            "OneFreeCoupon: you don't own this coupon"
         );
         require(couponStatus[tokenId] == CouponStatus.UNUSED);
 
@@ -44,7 +44,7 @@ contract OneFreeNFT is ERC721("OneFreeNFT", "OF") {
     function grant(uint256 tokenId) external {
         require(
             couponGivers[tokenId] == msg.sender,
-            "OneFreeNFT: you didn't give this coupon"
+            "OneFreeCoupon: you didn't give this coupon"
         );
         require(couponStatus[tokenId] == CouponStatus.REDEEM_REQUESTED);
 

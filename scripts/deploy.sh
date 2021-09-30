@@ -6,5 +6,5 @@ set -eo pipefail
 . $(dirname $0)/common.sh
 
 # Deploy.
-OneFreeNFTAddr=$(deploy OneFreeNFT)
-log "OneFreeNFT deployed at:" $OneFreeNFTAddr
+OneFreeCouponAddr=$(deploy OneFreeCoupon)
+log "OneFreeCoupon deployed at:" $OneFreeCouponAddr

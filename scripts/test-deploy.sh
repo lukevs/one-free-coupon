@@ -9,7 +9,7 @@ set -eo pipefail
 . $(dirname $0)/deploy.sh
 
 # get the address
-addr=$(jq -r '.OneFreeNFT' out/addresses.json)
+addr=$(jq -r '.OneFreeCoupon' out/addresses.json)
 
 # mint a coupon
 seth send $addr \
