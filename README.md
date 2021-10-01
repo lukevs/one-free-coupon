@@ -4,6 +4,9 @@
 
 ![image](https://user-images.githubusercontent.com/5885679/135334888-e7cf045c-db2e-4d67-876b-751ac448117b.png)
 
+## Contract Address
+mainnet: [0x6ef7dab21eb9b0577be1a9d793c46425328b19b9](https://etherscan.io/address/0x6ef7dab21eb9b0577be1a9d793c46425328b19b9)
+
 ## How it works
 
 🎟 `mint` to a friend - `mint(address to, string memory coupon)`
